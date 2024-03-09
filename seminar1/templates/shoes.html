@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+        <h2>Обувь</h2>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <ul>
+            <li>👞 туфли</li>
+            <li>👢 сапоги</li>
+            <li>👟 кроссовки</li>
+            <li>🥿 мокасины</li>
+            <li>👠 туфли на каблуке</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
