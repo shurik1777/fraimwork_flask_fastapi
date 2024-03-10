@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Title</title>
+</head>
+<body>
+{#9е задание#}
+<div class="container mt-5">
+    <h2>Enter your name and email:</h2>
+    <form action="/welcome" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+{#8е задание#}
+{#<div class="container mt-5">#}
+{#    <form method="post">#}
+{#        <div class="form-group">#}
+{#            <label for="name">Введите ваше имя:</label>#}
+{#            <input type="text" class="form-control" id="name" name="name">#}
+{#        </div>#}
+{#        <button type="submit" class="btn btn-primary">Отправить</button>#}
+{#    </form>#}
+{#</div>#}
+
+
+{#7е задание#}
+{#<div class="container">#}
+{#    <h1>Введите число</h1>#}
+{#    <form action="/result" method="post">#}
+{#        <input type="number" name="number" class="form-control" placeholder="Введите число" required>#}
+{#        <button type="submit" class="btn btn-primary mt-3">Отправить</button>#}
+{#    </form>#}
+{#</div>#}
+
+
+{#6е задание#}
+{#<div class="container mt-5">#}
+{#    <form action="/check_age" method="post">#}
+{#        <div class="form-group">#}
+{#            <label for="name">Имя:</label>#}
+{#            <input type="text" class="form-control" id="name" name="name" required>#}
+{#        </div>#}
+{#        <div class="form-group">#}
+{#            <label for="age">Возраст:</label>#}
+{#            <input type="number" class="form-control" id="age" name="age" required>#}
+{#        </div>#}
+{#        <button type="submit" class="btn btn-primary">Отправить</button>#}
+{#    </form>#}
+{#</div>#}
+
+{#5е задание#}
+{#<h3>Вы попали на главную</h3>#}
+{#<div class="container mt-5">#}
+{#    <form method="POST">#}
+{#        <div class="form-group">#}
+{#            <label for="text">Введите текст:</label>#}
+{#            <textarea class="form-control" id="text" name="text" rows="5" required></textarea>#}
+{#        </div>#}
+{#        <button type="submit" class="btn btn-primary">Отправить</button>#}
+{#    </form>#}
+{#</div>#}
+
+{#2е задание#}
+{#<img src="{{ url_for('static', filename='image/foto.jpg') }}" alt="Моё фото"#}
+{#     width="300" class="col-12 col-md-6 img-fluid w-25 rounded-circle ">#}
+{##}
+{#<a href="/upload/">Для загрузки фото перейдите по ссылке</a>#}
+{#</ul>#}
+</body>
+</html>
+
