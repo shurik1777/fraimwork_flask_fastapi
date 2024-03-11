@@ -1,4 +1,5 @@
-from app_01 import app
+# from app_01 import app
+from lection3_additional_opportunity_flask.app_09 import app
 """
 При обнаружении данного файла можно через консоль запускать простыми командами
 проект на выполнение:
