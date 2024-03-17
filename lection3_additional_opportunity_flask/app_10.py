@@ -17,7 +17,7 @@ def get_data():
 
 
 @app.route('/users/')
-def get_users():
+def all_users():
     users = User.query.all()
     context = {'users': users}
     return render_template('users.html', **context)
