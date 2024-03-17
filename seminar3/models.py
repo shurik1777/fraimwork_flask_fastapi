@@ -11,7 +11,7 @@ class Gender(enum.Enum):
 
 
 class Faculty(db.Model):
-    id_ = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     faculty_name = db.Column(db.String(80), nullable=False)
     student = db.relationship('Student', backref=db.backref(f'faculty'), lazy=True)
 
@@ -20,13 +20,24 @@ class Faculty(db.Model):
 
 
 class Student(db.Model):
-    id_ = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     age = db.Column(db.Integer, nullable=False)
     gender = db.Column(db.Enum(Gender), nullable=False)
     group = db.Column(db.Integer, nullable=False)
-    faculty_id = db.Column(db.Integer, db.ForeignKey('faculty.id_'), nullable=False)
+    faculty_id = db.Column(db.Integer, db.ForeignKey('faculty.id'), nullable=False)
 
     def __repr__(self):
         return f'Student({self.name}, {self.last_name})'
+
+
+# class Post(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     title = db.Column(db.String(80), nullable=False)
+#     content = db.Column(db.Text, nullable=False)
+#     author_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+#     created_at = db.Column(db.DateTime, default=datetime.now)
+
+    # def __repr__(self):
+    #     return f'Post({self.title}, {self.content})'

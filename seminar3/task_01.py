@@ -29,13 +29,13 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/students')
+@app.route('/students/')
 def students():
     students = db.session.query(Student).all()
     return render_template('students.html', student=students)
 
 
-@app.cli.command('initdb')
+@app.cli.command('init-db')
 def initdb_command():
     db.create_all()
     print('Initialized the database.')
@@ -48,7 +48,8 @@ def fill_db():
     for student in range(1, count + 1):
         new_student = Student(
             name=f'student{student}', last_name=f'last_name{student}',
-            age=choice([student, student * 5]), gender=choice([Gender.male, Gender.female]), group=f'group{student}',
+            age=choice([student, student * 5]),
+            gender=choice([Gender.male, Gender.female]), group=f'group{student}',
             faculty_id=randint(1, 10)
         )
         db.session.add(new_student)
