@@ -26,7 +26,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('templates/index_t1.html')
 
 
 @app.route('/students/')

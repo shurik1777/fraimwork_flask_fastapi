@@ -23,7 +23,7 @@ def login_():
     get_login = request.values.get('login')
     get_password = request.values.get('password')
     if get_login == LOGIN and get_password == PASSWORD:
-        return render_template('index.html')
+        return render_template('templates/index_t1.html')
     return render_template('error.html')
 
 

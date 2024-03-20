@@ -18,7 +18,7 @@ def index():
         name = request.form['name']
         flash(f'Привет, {name}!')
         return redirect(url_for('message'))
-    return render_template('index.html')
+    return render_template('templates/index_t1.html')
 
 
 @app.route('/message')

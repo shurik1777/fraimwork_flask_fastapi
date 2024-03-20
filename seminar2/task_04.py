@@ -18,7 +18,7 @@ def index():
         word_count = len(re.findall(r'\w+', text))
         return redirect(url_for('result', word_count=word_count))
 
-    return render_template('index.html')
+    return render_template('templates/index_t1.html')
 
 
 @app.route('/result/<int:word_count>')
