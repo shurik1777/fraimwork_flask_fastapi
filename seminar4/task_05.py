@@ -7,7 +7,7 @@
 """
 import os
 import multiprocessing
-import time
+from time import time
 
 
 def count_words_in_file(file_path):
@@ -35,7 +35,7 @@ def process_files_in_directory(directory):
 
 
 if __name__ == '__main__':
-    start_time = time.time()
+    start_time = time()
     directory = r'C:\Users\shuri\OneDrive\Рабочий стол\fraimwork_flask_fastapi\seminar4\output'
     process_files_in_directory(directory)
-    print(f'Execution time: {(time.time() - start_time):.3f} seconds')
+    print(f'Execution time: {(time() - start_time):.3f} seconds')

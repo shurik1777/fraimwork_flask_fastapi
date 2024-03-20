@@ -7,7 +7,7 @@
 """
 import threading
 import os
-import time
+from time import time
 
 MY_PATH = r'C:\Users\shuri\OneDrive\Рабочий стол\fraimwork_flask_fastapi\seminar4\output'
 
@@ -34,6 +34,6 @@ def process_files_in_directory(directory):
 
 
 if __name__ == "__main__":
-    start_time = time.time()
+    start_time = time()
     process_files_in_directory(MY_PATH)
-    print(f'Execution time: {(time.time() - start_time):.10f} seconds')
+    print(f'Execution time: {(time() - start_time):.10f} seconds')

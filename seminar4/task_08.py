@@ -11,7 +11,7 @@
 # import asyncio
 # import aiohttp
 # import os
-# import time
+# from time import time
 #
 # url_list = ["http://zagonka11.zagonkop.gb.net/108140-kotiki-2022-onlayn", "http://www.nnzoo.ru/animals"]
 #
@@ -35,13 +35,13 @@
 #
 #
 # if __name__ == '__main__':
-#     start_time = time.time()
+#     start_time = time()
 #     asyncio.run(main())
-#     print(f'Время выполнения: {(time.time() - start_time):.10f}')
+#     print(f'Время выполнения: {(time() - start_time):.10f}')
 # # urls = ['http://zagonka11.zagonkop.gb.net/108140-kotiki-2022-onlayn.html', 'http://www.nnzoo.ru/animals.html']
 """
 import multiprocessing  # Решение с многопроцессорностью
-import time
+from time import time
 import requests
 
 url_list = ["http://www.nnzoo.ru/animals.html"]
@@ -54,7 +54,7 @@ def download_page(url):
 
 
 if __name__ == '__main__':
-    start_time = time.time()
+    start_time = time()
     processes = []
     for url in url_list:
         process = multiprocessing.Process(target=download_page, args=(url,))
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     for process in processes:
         process.join()
 
-    print(f'Время выполнения: {(time.time() - start_time):.10f}')
+    print(f'Время выполнения: {(time() - start_time):.10f}')
 """
 import threading
 import requests

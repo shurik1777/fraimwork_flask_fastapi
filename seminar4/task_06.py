@@ -7,7 +7,7 @@
 """
 import os
 import asyncio
-import time
+from time import time
 
 
 async def count_words_in_file(file_path):
@@ -33,15 +33,15 @@ async def main():
 
 
 if __name__ == '__main__':
-    start_time = time.time()
+    start_time = time()
     asyncio.run(main())
-    print(f'Время выполнения: {(time.time() - start_time):.10f}')
+    print(f'Время выполнения: {(time() - start_time):.10f}')
 # Execution time: 0.0009982586 seconds
 # Время выполнени 0.0019934177
 # import asyncio
 # import os
 # import aiofiles
-# import time
+# from time import time
 #
 # MY_PATH = r'C:\Users\shuri\OneDrive\Рабочий стол\fraimwork_flask_fastapi\seminar4'
 #
@@ -60,6 +60,6 @@ if __name__ == '__main__':
 #
 #
 # if __name__ == '__main__':
-#     start_time = time.time()
+#     start_time = time()
 #     asyncio.run(main())
-#     print(f'{time.time() - start_time}')
+#     print(f'{time() - start_time}')
