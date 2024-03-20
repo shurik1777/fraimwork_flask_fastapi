@@ -28,15 +28,16 @@ async def process_files_in_directory(directory):
 
 
 async def main():
-    directory = 'directory'
+    directory = r'C:\Users\shuri\OneDrive\Рабочий стол\fraimwork_flask_fastapi\seminar4\output'
     await process_files_in_directory(directory)
 
 
 if __name__ == '__main__':
     start_time = time.time()
     asyncio.run(main())
-    print(f'Время выполнения: {(time.time() - start_time):.3f}')
-
+    print(f'Время выполнения: {(time.time() - start_time):.10f}')
+# Execution time: 0.0009982586 seconds
+# Время выполнени 0.0019934177
 # import asyncio
 # import os
 # import aiofiles

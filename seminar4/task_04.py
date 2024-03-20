@@ -5,32 +5,11 @@
 выводить результаты в консоль.
 � Используйте потоки.
 """
-# import os
-# from concurrent.futures import ThreadPoolExecutor
-#
-#
-# def count_words_in_file(file_path):
-#     with open(file_path, 'r', encoding='utf-8') as file:
-#         content = file.read()
-#         word_count = len(content.split())
-#         print(f"{file_path}: {word_count} слов")
-#
-#
-# def main(directory):
-#     with ThreadPoolExecutor() as executor:
-#         for root, _, files in os.walk(directory):
-#             for file in files:
-#                 file_path = os.path.join(root, file)
-#                 executor.submit(count_words_in_file, file_path)
-#
-#
-# if __name__ == "__main__":
-#     directory_path = 'output'
-#     main(directory_path)
 import threading
 import os
+import time
 
-MY_PATH = '.'
+MY_PATH = r'C:\Users\shuri\OneDrive\Рабочий стол\fraimwork_flask_fastapi\seminar4\output'
 
 
 def count_words_in_file(file_):
@@ -55,4 +34,6 @@ def process_files_in_directory(directory):
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     process_files_in_directory(MY_PATH)
+    print(f'Execution time: {(time.time() - start_time):.10f} seconds')

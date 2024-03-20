@@ -30,7 +30,7 @@ VLAN на роутере:
 !
 interface GigabitEthernet0/0/0.10 - создание подынтерфейса на порту GigabitEthernet0/0/0 с ID 10.
  encapsulation dot1Q 10 - включение подынтерфейса GigabitEthernet0/0/0.10 во влан 10.
- no ip address
+ no ip
 !
 interface GigabitEthernet0/0/0.20 - создание подынтерфейса на порту GigabitEthernet0/0/0 с ID 20.
  encapsulation dot1Q 20 - включение подынтерфейса GigabitEthernet0/0/0.10 во влан 20.
