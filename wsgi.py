@@ -1,5 +1,6 @@
 # from app_01 import app
-from seminar3.task_01 import app
+from seminar3.task_03 import app
+
 """
 При обнаружении данного файла можно через консоль запускать простыми командами
 проект на выполнение:
